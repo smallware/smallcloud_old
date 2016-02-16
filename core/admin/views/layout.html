@@ -1,0 +1,51 @@
+<html lang="en">
+    <head>
+      <title>SmallCloud Admin</title>
+      <meta name="viewport" content="initial-scale=1" />
+
+      <script src="/core/bower_components/requirejs/require.js" data-main="/core/scripts/smallcloud.js"></script>
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+      <link href="/core/bower_components/mdi/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="/core/styles/admin.css">
+
+    </head>
+    <body id="admin" layout="row">
+
+      <md-sidenav id="sideNav"
+                  class="md-sidenav-left"
+                  md-component-id="sideNav"
+                  md-is-locked-open="$mdMedia('gt-lg')">
+
+
+          <md-toolbar>
+              <div class="md-toolbar-tools">
+
+                  <span>
+                      <i class="mdi mdi-apple-mobileme"></i>
+                      minivac
+                  </span>
+
+                  <span flex></span>
+
+                  <md-button>
+                      <i class="mdi mdi-account"></i>
+                      andres
+                      <i class="mdi mdi-chevron-down"></i>
+                  </md-button>
+
+              </div>
+          </md-toolbar>
+
+        <div class="sca-banner">
+          <md-icon md-svg-src="/core/images/smallcloud-logo.svg"></md-icon>
+        </div>
+
+        <sca-menu id="navMenu"></sca-menu>
+
+      </md-sidenav>
+
+      <div id="body" ui-view></div>
+
+    </body>
+</html>

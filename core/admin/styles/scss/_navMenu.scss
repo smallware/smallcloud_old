@@ -1,0 +1,75 @@
+
+// Responsive sidebar
+md-sidenav{
+  background: transparent;
+  box-shadow: 1px 0 3px #999;
+  display: flex;
+
+  md-toolbar{
+
+    span{
+      color: $softTxt;
+      i{ font-size: 18px; }
+    }
+
+    .md-button{
+      color: $softTxt;
+      transition: color 0.1s ease;
+      text-transform: lowercase;
+
+      i{ font-size: 18px; }
+
+      &:hover{
+        color: $softTxtHover;
+      }
+    }
+  }
+
+  .sca-banner{
+    md-icon{
+      width: 128px;
+      height: 128px;
+      opacity: 0.85;
+    }
+  }
+
+  md-list{
+    background: #ffffff;
+    flex-grow: 1;
+    padding: 0;
+  }
+}
+
+
+// Main navigation menu
+#navMenu{
+  overflow: hidden;
+
+  button{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+
+    &:hover{
+      background: transparent;
+    }
+  }
+
+  .sca-menu-branch{
+
+    md-list-item{ border: none; }
+
+    md-list{
+      transition: all 0.5s ease-out;
+      overflow: hidden;
+
+      &.collapsed{ height: 0 !important; }
+
+      button{
+        box-sizing: border-box;
+        padding-left: $menuIconSize * 2;
+      }
+
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<html lang="en">
+    <head>
+        <title>SmallCloud Login</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+        <link rel="stylesheet" href="/core/bower_components/angular-material/angular-material.min.css">
+        <link rel="stylesheet" href="/core/core.css">
+        <meta name="viewport" content="initial-scale=1" />
+    </head>
+    <body ng-app="SmallLogin">
+
+        <div id="login" class="md-whiteframe-z2">
+
+            <h1 class="md-display-2">SmallCloud Login</h1>
+
+            <strong class="message"></strong>
+
+            <form action="/login" method="post">
+
+                <md-input-container>
+                    <label>Username</label>
+                    <input type="text" name="username">
+                </md-input-container>
+                <md-input-container>
+                    <label>Password</label>
+                    <input type="password" name="password">
+                </md-input-container>
+
+                <md-button class="md-raised md-primary" type="submit">Login</md-button>
+                <md-button ng-href="/reset-pwd">Forgot password</md-button>
+
+                <md-checkbox class="md-primary" aria-label="Remember me">
+                    Remember me
+                </md-checkbox>
+
+            </form>
+
+        </div>
+
+        <div id="scripts">
+            <script src="/core/bower_components/angular/angular.js"></script>
+            <script src="/core/bower_components/angular-animate/angular-animate.js"></script>
+            <script src="/core/bower_components/angular-aria/angular-aria.js"></script>
+            <script src="/core/bower_components/angular-material/angular-material.js"></script>
+            <script src="/core/scripts/views/login.js"></script>
+        </div>
+
+    </body>
+</html>

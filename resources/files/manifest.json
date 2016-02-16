@@ -1,0 +1,11 @@
+{
+  "vocabulary": {
+    "enorme": true
+  },
+  "version": "0.1.1",
+  "name": "Files",
+  "dependencies": {
+    "resourceA": "0.1.2",
+    "resourceB": "1.3.2"
+  }
+}

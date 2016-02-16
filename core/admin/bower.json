@@ -1,0 +1,31 @@
+{
+  "name": "SmallCloud Admin",
+  "version": "0.1.0",
+  "authors": [
+    "Andres Abilio Arroyo Knudsen <andres@abilio.dk>"
+  ],
+  "description": "SmallCloud admin web interface",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "angular-material": "~0.10.1",
+    "angular-translate": "~2.7.2",
+    "angular-ui-router": "~0.2.15",
+    "jquery": "~2.1.4",
+    "mdi": "~1.1.70",
+    "requirejs": "~2.1.20",
+    "requirejs-plugins": "~1.0.3",
+    "requirejs-text": "~2.0.14",
+    "tc-angular-chartjs": "~1.0.12"
+  },
+  "resolutions": {
+    "angular": "~1.x"
+  }
+}

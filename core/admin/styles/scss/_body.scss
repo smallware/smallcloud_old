@@ -1,0 +1,44 @@
+
+#body{
+  flex-grow: 1;
+
+  .sca-view{
+    display: flex;
+    height: 100%;
+
+    &.sca-view-row{
+      flex-direction: row;
+
+      .sca-list-pane{
+        flex-grow: 1 !important;
+        z-index: 2 !important;
+      }
+
+      .sca-pane{
+        flex-grow: 3;
+      }
+    }
+  }
+
+  .sca-pane{
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+
+    md-content{
+      flex-grow: 1;
+    }
+  }
+
+  .sca-list-pane{
+    @extend .sca-pane;
+    max-width: 40%;
+    box-shadow: 1px 0 3px #999;
+
+    button{
+      padding: 10px 16px 10px 32px;
+    }
+  }
+}

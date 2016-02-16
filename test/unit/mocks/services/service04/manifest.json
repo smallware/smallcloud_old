@@ -1,0 +1,17 @@
+{
+  "name": "Test Service 04",
+  "description": "Mock service for SmallCloud testing",
+  "smallcloud": "0.1.0",
+  "resources": {
+    "uses":     ["resource01"],
+    "requires": [
+      { "id": "resource02" }
+    ],
+    "provides": [
+      {
+        "id": "resource04",
+        "description": "Mock resource for SmallCloud testing"
+      }
+    ]
+  }
+}

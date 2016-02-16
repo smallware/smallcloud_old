@@ -1,0 +1,89 @@
+<div id="servicesView" class="sca-view sca-view-row">
+
+    <div id="servicesList" class="sca-list-pane">
+        <md-toolbar ng-controller="ToolbarController">
+            <div class="md-toolbar-tools">
+
+                <md-button class="md-icon-button"
+                           aria-label="Menu"
+                           ng-click="toggleNav()"
+                           hide-gt-lg>
+                    <i class="mdi mdi-menu"></i>
+                </md-button>
+
+                <h2>
+                    <span>Services</span>
+                </h2>
+
+                <span flex></span>
+
+            </div>
+        </md-toolbar>
+
+        <div class="sca-banner">
+            <div class="sca-banner-content">
+                <p>{{banner.desc}}</p>
+            </div>
+        </div>
+
+        <md-content>
+            <md-list class="sca-list">
+                <md-list-item class="md-2-line"
+                              ng-class="{active: service.isActive}"
+                              ng-repeat="service in services"
+                              ng-click="select(service)">
+                    <md-icon md-svg-src="{{service.icon}}"></md-icon>
+                    <!--<i class="sca-status mdi"-->
+                       <!--ng-class="{enabled: service.isEnabled, disabled: !service.isEnabled}"></i>-->
+                    <div class="md-list-item-text">
+                        <h3>{{service.name}}</h3>
+                        <p>{{service.desc}}</p>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </div>
+
+    <div id="serviceDetail" class="sca-pane">
+        <md-toolbar ng-controller="ToolbarController">
+            <div class="md-toolbar-tools">
+
+                <h2>
+                    <span>Service configuration</span>
+                </h2>
+
+                <span flex></span>
+
+                <md-button class="md-icon-button" aria-label="Favorite">
+                    <i class="mdi mdi-bell"></i>
+                </md-button>
+
+            </div>
+        </md-toolbar>
+
+        <div class="sca-banner">
+            <div class="sca-banner-content">
+                <md-icon md-svg-src="{{selected.icon}}"></md-icon>
+                <h1>{{selected.name}}</h1>
+                <p>{{selected.desc}}</p>
+                <div class="sca-service-actions">
+                    <md-button class="md-raised" ng-if="selected.isEnabled">
+                        <i class="mdi mdi-debug-step-into"></i>
+                        Deactivate
+                    </md-button>
+                    <md-button class="md-raised" ng-if="!selected.isEnabled">
+                        <i class="mdi mdi-debug-step-out"></i>
+                        Activate
+                    </md-button>
+                </div>
+            </div>
+        </div>
+
+        <md-content>
+            CONTENT
+        </md-content>
+    </div>
+
+</div>
+
+

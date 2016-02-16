@@ -1,0 +1,4 @@
+
+build-essential
+libkrb5
+libkrb5-dev

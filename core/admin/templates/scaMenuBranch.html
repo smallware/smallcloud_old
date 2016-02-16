@@ -1,0 +1,27 @@
+<div class="sca-menu-branch sca-list">
+
+  <md-list-item class="md-2-line"
+                ng-class="{active: item.isActive, parent: item.isActiveParent}"
+                ng-click="request(item)">
+      <md-icon md-svg-src="{{item.icon}}"></md-icon>
+    <div class="md-list-item-text">
+      <h3>{{item.label}}</h3>
+      <p>{{item.sub}}</p>
+    </div>
+  </md-list-item>
+
+  <md-list ng-class="{expanded: item.isExpanded, collapsed: !item.isExpanded}">
+
+    <md-list-item ng-repeat="child in item.children"
+                  ng-click="request(child)"
+                  class="md-2-line"
+                  sca-auto-height
+                  ng-class="{active: child.isActive}">
+        <md-icon md-svg-src="{{child.icon}}"></md-icon>
+      <div class="md-list-item-text">
+        <h3>{{child.label}}</h3>
+      </div>
+    </md-list-item>
+
+  </md-list>
+</div>

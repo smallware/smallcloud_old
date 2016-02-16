@@ -1,0 +1,32 @@
+
+// Globals
+$padding: 15px;
+
+
+// Colors
+$mainBg: darken(#e0e0e0, 5%);
+$accent: rgba(0, 150, 136, 0.87);
+$listActiveBg: lighten($mainBg, 10%);
+$listChildrenBg: lighten($mainBg, 6%);
+$warning: #bf2214;
+$good: #349518;
+$softTxt: #777;
+$softTxtHover: #444;
+
+
+// Toolbar
+$toolbarHeight: 48px;
+
+
+// Banner
+$bannerHeight: 220px;
+
+
+// Menu
+$menuIconColor: #555;
+$menuIconSize: 40px;
+$menuChildSize: 24px;
+
+
+// List
+$itemDivider: lighten($mainBg, 10%);

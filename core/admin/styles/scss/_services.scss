@@ -1,0 +1,70 @@
+#servicesView{
+
+  #servicesList{
+
+    .sca-banner{
+      .sca-banner-content{
+        //max-width: 350px;
+        width: 70%;
+
+        md-icon{
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }
+
+  }
+
+  .sca-list{
+
+    md-list-item{
+      position: relative;
+
+      .sca-status{
+        position: absolute;
+        top: 54px;
+        left: 64px;
+
+        &.enabled{
+          &::before { content: "\f1f7"; }
+          color: $good;
+        }
+
+        &.disabled{
+          &::before { content: "\f217"; }
+          color: $warning;
+        }
+      }
+    }
+  }
+
+  #serviceDetail{
+    .sca-banner{
+      .sca-banner-content{
+
+        md-icon{
+          width: 128px;
+          height: 128px;
+        }
+
+        h1{
+          font-weight: normal;
+        }
+
+        p{
+          margin: 5px 0;
+        }
+
+        button{
+          margin: 10px 0;
+          padding-right: 10px;
+
+          i{
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

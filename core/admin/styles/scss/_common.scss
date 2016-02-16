@@ -1,0 +1,130 @@
+
+// Global /////////////////////////////////////////////////////////////////////
+*{
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: $mainBg;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+
+// Icons //////////////////////////////////////////////////////////////////////
+.mdi{
+  font-size: 24px;
+}
+
+i{
+  margin: auto;
+  background-repeat: no-repeat no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+  line-height: 1;
+}
+
+
+// Toolbars ///////////////////////////////////////////////////////////////////
+md-toolbar{
+  min-height: $toolbarHeight;
+  background: $mainBg;
+
+  .md-toolbar-tools{
+    font-size: 16px;
+    height: $toolbarHeight;
+  }
+
+  md-menu{
+    padding: 0;
+  }
+}
+
+
+// Lists //////////////////////////////////////////////////////////////////////
+.sca-list{
+  md-list-item {
+    border-bottom: 1px solid $itemDivider;
+
+    .md-button:hover{
+      background: transparent !important;
+    }
+
+    .md-list-item-text{
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+      .md-list-item-text{ opacity: 0.9; }
+    }
+
+    &.active {
+      background: $listActiveBg;
+      .md-list-item-text{ opacity: 1; }
+    }
+
+    &.parent {
+      .md-list-item-text{ opacity: 1; }
+    }
+
+    md-icon {
+      width: 42px !important;
+      height: 42px !important;
+      margin-right: 24px !important;
+    }
+  }
+
+  // Children
+  md-list{
+    background: $listChildrenBg;
+
+    md-list-item {
+      md-icon {
+        width: 24px !important;
+        height: 24px !important;
+        margin-right: 18px !important;
+      }
+    }
+  }
+}
+
+
+// Banners ////////////////////////////////////////////////////////////////////
+.sca-banner{
+  background: $mainBg;
+  height: $bannerHeight;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.sca-banner-no-menu{
+    height: $bannerHeight + $toolbarHeight;
+  }
+
+  .sca-banner-content {
+    width: 80%;
+
+      md-icon {
+        float: left;
+        margin-right: 32px;
+      }
+  }
+
+
+}
+
